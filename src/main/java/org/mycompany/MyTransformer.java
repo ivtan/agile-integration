@@ -25,7 +25,8 @@ import org.springframework.stereotype.Component;
 public class MyTransformer {
 
     public String transform() {
-        // let's return a random string
+        /*
+    	// let's return a random string
         StringBuffer buffer = new StringBuffer();
         for (int i = 0; i < 3; i++) {
             int number = (int) (Math.round(Math.random() * 1000) % 10);
@@ -33,6 +34,10 @@ public class MyTransformer {
             buffer.append(letter);
         }
         return buffer.toString();
+        */
+    	
+    	return "Hello from CustomerInfo API";
+    	
     }
 
 }
