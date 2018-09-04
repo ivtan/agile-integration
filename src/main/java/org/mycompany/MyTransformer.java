@@ -36,7 +36,7 @@ public class MyTransformer {
         return buffer.toString();
         */
     	
-    	return "Hello from CustomerInfo API";
+    	return "Hello World";
     	
     }
 
