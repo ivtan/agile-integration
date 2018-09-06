@@ -18,18 +18,18 @@
             <apiProperty key="api.title" value="DEMO APIs"/>
             <apiProperty key="api.version" value="1.0.0"/>
         </restConfiguration>
-        <rest path="/customer">
+        <rest path="/promotions">
             <get uri="/getInfo">
-                <description>Get Customer Info</description>
-                <to uri="direct:CustomerInfo"/>
+                <description>Get Promotions Info</description>
+                <to uri="direct:PromotionsInfo"/>
             </get>
         </rest>
-        <route id="customer-info-route">
-            <from id="direct1" uri="direct:CustomerInfo"/>
+        <route id="promotions-info-route">
+            <from id="direct1" uri="direct:PromotionsInfo"/>
             <transform id="transform1">
                 <method ref="myTransformer"/>
             </transform>
-            <log id="customer-info-log" message=">>> ${body}"/>
+            <log id="promotions-info-log" message=">>> ${body}"/>
         </route>
         <!-- route id="simple-route">
             <from id="route-timer" uri="timer:foo?period=2000"/>
