@@ -24,6 +24,19 @@
                 <to uri="direct:PromotionsInfo"/>
             </get>
         </rest>
+        <rest path="/company">
+            <get uri="/getInfo">
+                <description>Get Company Info</description>
+                <to uri="direct:companyInfo"/>
+            </get>
+        </rest>
+        <route id="company-info-route">
+            <from id="direct2" uri="direct:companyInfo"/>
+            <transform id="transform1">
+                <method ref="myTransformer"/>
+            </transform>
+            <log id="company-info-log" message=">>> ${body}"/>
+        </route>
         <route id="promotions-info-route">
             <from id="direct1" uri="direct:PromotionsInfo"/>
             <transform id="transform1">
