@@ -36,7 +36,7 @@ public class MyTransformer {
         return buffer.toString();
         */
     	
-    	return "Latest Promotions: 10Gb Data Free";
+    	return "Latest Company Data: Company Info Details";
     	
     }
 
